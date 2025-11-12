@@ -1,5 +1,5 @@
 # ru-RPKI-ready
-This repository contains the dataset for the paper "ru-RPKI-ready: the Road Left to Full ROA Adoption" by Gouda et al., published in ACM Internet Measurement Conference (IMC) 2025. The dataset provides essential information regarding routed IPv4 and IPv6 prefixes that enables researchers and operators to follow the RPKI planning and deployment framework proposed in the paper. For more details regarding the framework, refer to the [paper](https://deepakgouda.github.io/assets/pdf/IMC-2025-ru-RPKI-ready.pdf).
+This repository contains the dataset for the paper "ru-RPKI-ready: the Road Left to Full ROA Adoption" by Deepak Gouda, Romain Fontugne and Cecilia Testart, published in ACM Internet Measurement Conference (IMC) 2025. The dataset provides essential information regarding routed IPv4 and IPv6 prefixes that enables researchers and operators to follow the RPKI planning and deployment framework proposed in the paper. For more details regarding the framework, refer to the [paper](https://deepakgouda.github.io/assets/pdf/IMC-2025-ru-RPKI-ready.pdf).
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17237911.svg)](https://doi.org/10.5281/zenodo.17237911)
 
@@ -17,7 +17,7 @@ git lfs pull
 ## Using the dataset in Python
 To load and use the dataset in Python, you can use the following code snippet:
 
-```python
+```
 >>> import pandas as pd
 >>> data = pd.read_parquet("data/prefix_tags_2025-04-01_v4.parquet")
 >>> data[data.prefix == "208.186.48.0/20"].iloc[0]
@@ -45,3 +45,8 @@ Tag List                         [ROA Not Found, Certified, Reassigned, Diff SK.
 - Origin ASN: The Autonomous System Number (ASN) originating the prefix in BGP.
 - ASN Organization Name: The name of the organization associated with the origin ASN.
 - Tag List: A list of tags associated with the prefix.
+
+## RPKI Issuing Framework
+To understand the RPKI issuing framework proposed in the paper, please refer to [Section 5: Facilitating ROA Planning](https://deepakgouda.github.io/assets/pdf/IMC-2025-ru-RPKI-ready.pdf) in the paper. Here is the proposed framework diagram for reference:
+
+![RPKI Issuing Framework](images/RPKI-Planning-Framework.png)
